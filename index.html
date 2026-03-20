@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+
+<style>
+div:hover {
+  transform: scale(1.03);
+  transition: 0.3s;
+}
+
+/* ✅ Active link style */
+nav a.active {
+  border-bottom: 2px solid yellow;
+}
+</style>
+
+</head>
+
+<body style="margin:0; font-family:Arial; background:#f5f5f5;">
+
+<!-- NAVBAR -->
+<nav style="display:flex; justify-content:space-between; padding:15px 30px; background:black; color:white;">
+  <strong>Shweta Kumari</strong>
+  <strong>Frontend Developer..</strong>
+  <div>
+    <a href="#about" style="color:white; margin-left:15px; text-decoration:none;">About</a>
+    <a href="#work" style="color:white; margin-left:15px; text-decoration:none;">Work</a>
+    <a href="#projects" style="color:white; margin-left:15px; text-decoration:none;">Projects</a>
+    <a href="#contact" style="color:white; margin-left:15px; text-decoration:none;">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section style="text-align:center; padding:60px; background:#eaeaea;">
+  <h1 style="font-size:40px;">Hey, I'm Shweta 👋</h1>
+  <h2 style="color:gray;">Frontend Developer</h2>
+
+  <button onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})"
+  style="padding:10px 20px; border:none; background:black; color:white; border-radius:5px; cursor:pointer;">
+    View Projects
+  </button>
+</section>
+
+<!-- ABOUT -->
+<section id="about" style="padding:40px;">
+  <h2>About Me</h2>
+
+  <div style="display:flex; gap:20px; align-items:center; flex-wrap:wrap;">
+    <img src="https://img.freepik.com/free-vector/illustrated-about-me-concept_52683-59123.jpg"
+    style="width:900px; border-radius:10px;">
+
+    <p>
+      Hey, I am Shweta Kumari. I am Currently pursuing B.Tech in Computer Science Engineering and learning web development.
+      I have basics knowledge of HTML, CSS and basic C language.
+      I want to become a software Engineer.
+    </p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section style="padding:40px;">
+  <h2>My Skills</h2>
+  <p>HTML</p>
+  <p>CSS</p>
+  <p>JavaScript (Learning)</p>
+  <p>C Programming</p>
+</section>
+
+<!-- WORK -->
+<section id="work" style="padding:40px;">
+  <h2>My Work</h2>
+
+  <div style="display:flex; gap:20px; flex-wrap:wrap;">
+    <div style="padding:20px; background:#ddd; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.2);">
+      <h3>Web Development</h3>
+      <p>I create responsive websites using HTML & CSS.</p>
+    </div>
+
+    <div style="padding:20px; background:#ddd; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.2);">
+      <h3>C Programming</h3>
+      <p>I have basic knowledge of C.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" style="padding:40px;">
+  <h2>My Projects</h2>
+
+  <div style="display:flex; gap:20px; flex-wrap:wrap;">
+
+    <div style="background:white; padding:15px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.2); width:250px;">
+      <img src="https://www.shutterstock.com/image-vector/gallery-colorful-typography-text-banner-260nw-1853706475.jpg"
+      style="width:100%; border-radius:10px;">
+      <h3>Image Gallery</h3>
+      <a href="https://shwetabhardwaj2512-stack.github.io/Shweta/" target="_blank">View Project</a>
+    </div>
+
+    <div style="background:white; padding:15px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.2); width:250px;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Irme035oRv5YgXJ3IFMG4okJbAx1qJJiQw&s"
+      style="width:100%; border-radius:10px;">
+      <h3>7 Wonders of the world</h3>
+      <a href="https://shwetabhardwaj2512-stack.github.io/Shweta2502/" target="_blank">View Project</a>
+    </div>
+
+    <div style="background:white; padding:15px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.2); width:250px;">
+      <img src="https://img.freepik.com/free-vector/restaurant-lettering-calligraphic-vintage-design-composition_126523-935.jpg?semt=ais_rp_progressive&w=740&q=80"
+      style="width:100%; border-radius:10px;">
+      <h3>Airlines.com</h3>
+      <a href="https://shwetabhardwaj2512-stack.github.io/Shwetabhardwaj/" target="_blank">View Project</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="padding: 40px; background-color: #f9f9f9;">
+  <h2 style="text-align: center;">Contact Me</h2>
+
+  <form style="max-width:600px; margin:auto; display:flex; flex-direction:column; gap:15px;">
+    <input type="text" placeholder="Your Name" required style="padding:10px;">
+    <input type="email" placeholder="Your Email" required style="padding:10px;">
+    <textarea placeholder="Your Message" rows="5" required style="padding:10px;"></textarea>
+    <button style="padding:10px; background:black; color:white;">Send Message</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer style="text-align:center; background:black; color:white; padding:10px;">
+  © 2026 Shweta Portfolio
+</footer>
+
+<!-- ✅ JS PART -->
+<script>
+// Smooth scroll
+document.querySelectorAll("nav a").forEach(link=>{
+    link.addEventListener("click",function(e){
+        e.preventDefault();
+        const targetId = this.getAttribute("href");
+        const targetSection = document.querySelector(targetId);
+
+        if(targetSection){
+            targetSection.scrollIntoView({
+                behavior:"smooth"
+            });
+        }
+    });
+});
+
+// ✅ Active navbar highlight on scroll
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 100;
+    if(pageYOffset >= sectionTop){
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if(link.getAttribute("href") === "#" + current){
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+
+</body>
+</html>
